@@ -1,0 +1,58 @@
+= SWE4.3: Ue03_Heseltine_Jack
+Jack Heseltine <s2110307016@fh-hagenberg.at>
+v1.0, 09.04.2023
+:toc-title: Inhalt
+:srcdir: ./src
+:testdir: ./test
+:icons: font
+:toc: auto
+:source-highlighter: rouge
+:rouge-style: github
+
+[float]
+== Erfüllungsgrad
+
+[cols=">,^,^,^,^,^,>"]
+|====
+| Nr | L   | I   | T   | Summe | Multiplikator  | Punkte
+| 1a | 2/2 | 3/3 | 5/5 | 10    | 4              | 40
+| 1b | 3/3 | 4/4 | 3/3 | 10    | 4              | 40
+| 1c | 2/2 | 2/2 | 6/6 | 10    | 2              | 20
+6+| Summe Erfüllungsgrad                        | 100
+|====
+
+==== Lösungsidee
+
+===== a)
+
+Heap aus der UE implementiert bereits das gegebene Interface PQueue, was nun formal auch dazugegeben wird.
+
+Die Hauptarbeit in a) ist also das Testframework aufzusetzen erstmal, und dann Tests auf Heap abzustimmen. Ein paar Ideen im vorhinein dazu:
+
+* Testung mit setUp und tearDown, immer eine neue Heap für die Test Cases, bzw bei tearDown Freigabe mit Nullsetzung
+
+
+==== Implementierung
+
+===== a) Heap (Ausarbeitung aus der UE als Grundlage)
+
+[source,c]
+----
+include::{srcdir}/at/fhooe/swe4/queues/Heap.java[]
+----
+
+===== a) Interface (am HUE-Blatt gegeben)
+
+[source,c]
+----
+include::{srcdir}/at/fhooe/swe4/queues/PQueue.java[]
+----
+
+==== Testung
+
+===== a) HeapTest
+
+[source,c]
+----
+include::{testdir}/at/fhooe/swe4/queues/HeapTest.java[]
+----
