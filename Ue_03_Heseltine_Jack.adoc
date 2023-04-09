@@ -30,7 +30,9 @@ Heap aus der UE implementiert bereits das gegebene Interface PQueue, was nun for
 Die Hauptarbeit in a) ist also das Testframework aufzusetzen erstmal, und dann Tests auf Heap abzustimmen. Ein paar Ideen im vorhinein dazu:
 
 * Testung mit setUp und tearDown, immer eine neue Heap für die Test Cases, bzw bei tearDown Freigabe mit Nullsetzung
-
+* Randomisiertes anlegen von Integern zum Testen im Falle von Integer-Templates
+* weil es ja um ein Template geht, greiffe ich als zweiten Datentyp zum Testen Strings heraus und mache damit ähnliche Tests wie mit Integern
+* Testung der vier gegebenen Methoden des Interfaces (nicht mehr, nicht weniger). Trotzdem brauche ich (im Vergleich zur UE) eine Hilfsmethode getSize() um enqueue/dequeue Operationen besser testen zu können.
 
 ==== Implementierung
 

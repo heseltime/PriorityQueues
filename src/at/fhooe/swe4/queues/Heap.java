@@ -49,6 +49,10 @@ public class Heap<T extends Comparable<T>> implements PQueue<T> {
     return top;
   }
 
+  public int getSize() {
+    return values.size();
+  }
+
   private static int parent(int i) { return (i-1)/2; } // (i+1)/2 - 1
 
   private static int left(int i) { return i*2+1;} // (i+1)*2-1
@@ -92,7 +96,7 @@ public class Heap<T extends Comparable<T>> implements PQueue<T> {
     while (i<values.size() && !less(values.get(parent(i)), values.get(i))) {
       i++;
     }
-    return i == values.size();
+    return i >= values.size();
   }
 
   @Override
